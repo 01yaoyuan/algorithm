@@ -1,0 +1,13 @@
+{
+    "editor.formatOnSave": true,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.fileSystemWatcher": {
+        "ignoreCreatedFiles": true,
+        "trace": "verbose"
+    },
+    "clangd.arguments": ["--background-index"],
+    "clangd.path": "/usr/local/llvm/bin/clangd",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_style": 
+        "{ BasedOnStyle: LLVM, BreakBeforeBraces: Allman, IndentWidth: 4, TabWidth: 4, UseTab: Never, PointerAlignment: Left, AlwaysBreakTemplateDeclarations: true, AlwaysBreakBeforeMultilineStrings: true, BinPackParameters: true, BinPackArguments: false, ConstructorInitializerAllOnOneLineOrOnePerLine: false }"
+}
