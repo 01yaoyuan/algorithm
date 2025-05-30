@@ -1,47 +1,54 @@
 #include "sortfunction.h"
+#include <iostream>
+using namespace std;
 int main()
-{	
-	SqList L;
-	int n,i,*p;
-	while(scanf("%d\n",&n)!=EOF)
-	{	CreateSqList1(&L,n);
-		HeapSort(&L);
-		Print1(L);
-		printf("\n");
-		/*p=(int *)malloc(n*sizeof(int));
-		for(int i=0;i<n;i++)
-		{
-			scanf("%d",&p[i]);
-			
-		}
-		ShellSort(p,n);
-		for(int i=0;i<n;i++)
-		{
-			printf("%d ",*(p+i));
-		}
-		printf("\n");*/
-		//ShellÅÅÐò 
-		/*p=(int *)malloc((n+1)*sizeof(int));
-		input(p,n);
-		InsertSort(p,n);
-		output(p,n);*/
-		//Ö±½Ó²åÈëÅÅÐò£» 
-		/*CreateSqList(&L,n);
-		SelectSort(&L);
-		Print(L);
-		//Destroy(&L);
-		printf("\n");*/
-		//¼òµ¥Ñ¡ÔñÅÅÐò£» 
-		/*p=(int *)malloc(n*sizeof(int));
-		for(i=0;i<n;i++)
-			scanf("%d",&p[i]);
-		QuickSort(p,0,n-1);	
-		for(i=0;i<n;i++)
-		printf("%d ",*(p+i));
-		free(p);
-		printf("\n");*/
-		//¿ìËÙÅÅÐò£» 
-	}
-	return 0;
-}
+{
 
+    int a[] = {2, 1, 5, 90, 23434, 23, 3};
+    HeapSort(a, sizeof(a) / sizeof(a[0]));
+    for (int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+    {
+        std::cout << a[i] << " ";
+    }
+    return 0;
+    // SqList L;
+    // int n,i,*p;
+    // while(scanf("%d\n",&n)!=EOF)
+    // {	CreateSqList1(&L,n);
+    // 	HeapSort(&L);
+    // 	Print1(L);
+    // 	printf("\n");
+    /*p=(int *)malloc(n*sizeof(int));
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&p[i]);
+
+    }
+    ShellSort(p,n);
+    for(int i=0;i<n;i++)
+    {
+        printf("%d ",*(p+i));
+    }
+    printf("\n");*/
+    // Shellï¿½ï¿½ï¿½ï¿½
+    /*p=(int *)malloc((n+1)*sizeof(int));
+    input(p,n);
+    InsertSort(p,n);
+    output(p,n);*/
+    //Ö±ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    /*CreateSqList(&L,n);
+    SelectSort(&L);
+    Print(L);
+    //Destroy(&L);
+    printf("\n");*/
+    //ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    /*p=(int *)malloc(n*sizeof(int));
+    for(i=0;i<n;i++)
+        scanf("%d",&p[i]);
+    QuickSort(p,0,n-1);
+    for(i=0;i<n;i++)
+    printf("%d ",*(p+i));
+    free(p);
+    printf("\n");*/
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+}
