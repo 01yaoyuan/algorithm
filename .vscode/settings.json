@@ -5,9 +5,46 @@
         "ignoreCreatedFiles": true,
         "trace": "verbose"
     },
-    "clangd.arguments": ["--background-index"],
+    "clangd.arguments": [
+        "--background-index"
+    ],
     "clangd.path": "/usr/local/llvm/bin/clangd",
     "C_Cpp.formatting": "clangFormat",
-    "C_Cpp.clang_format_style": 
-        "{ BasedOnStyle: LLVM, BreakBeforeBraces: Allman, IndentWidth: 4, TabWidth: 4, UseTab: Never, PointerAlignment: Left, AlwaysBreakTemplateDeclarations: true, AlwaysBreakBeforeMultilineStrings: true, BinPackParameters: true, BinPackArguments: false, ConstructorInitializerAllOnOneLineOrOnePerLine: false }"
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, BreakBeforeBraces: Allman, IndentWidth: 4, TabWidth: 4, UseTab: Never, PointerAlignment: Left, AlwaysBreakTemplateDeclarations: true, AlwaysBreakBeforeMultilineStrings: true, BinPackParameters: true, BinPackArguments: false, ConstructorInitializerAllOnOneLineOrOnePerLine: false }",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xelatex->bibtex->exlatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ]
 }
