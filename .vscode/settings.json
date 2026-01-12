@@ -1,50 +1,13 @@
 {
     "editor.formatOnSave": true,
-    "C_Cpp.intelliSenseEngine": "disabled",
-    "clangd.fileSystemWatcher": {
-        "ignoreCreatedFiles": true,
-        "trace": "verbose"
-    },
-    "clangd.arguments": [
-        "--background-index"
-    ],
-    "clangd.path": "/usr/local/llvm/bin/clangd",
-    "C_Cpp.formatting": "clangFormat",
-    "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, BreakBeforeBraces: Allman, IndentWidth: 4, TabWidth: 4, UseTab: Never, PointerAlignment: Left, AlwaysBreakTemplateDeclarations: true, AlwaysBreakBeforeMultilineStrings: true, BinPackParameters: true, BinPackArguments: false, ConstructorInitializerAllOnOneLineOrOnePerLine: false }",
-    "latex-workshop.latex.recipes": [
-        {
-            "name": "xelatex",
-            "tools": [
-                "xelatex"
-            ]
-        },
-        {
-            "name": "xelatex->bibtex->exlatex*2",
-            "tools": [
-                "xelatex",
-                "bibtex",
-                "xelatex",
-                "xelatex"
-            ]
-        }
-    ],
-    "latex-workshop.latex.tools": [
-        {
-            "name": "xelatex",
-            "command": "xelatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ]
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ]
-        }
-    ]
+    // PDF 预览设置
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.invertMode.enabled": "auto",
+    "latex-workshop.view.pdf.invert": 0.85,
+    // 自动清理辅助文件
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    // 默认编译引擎
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    // 格式化工具
+    "latex-workshop.formatting.latex": "latexindent"
 }
